@@ -16,6 +16,8 @@ hooks:
        rm -rf server/*
        rm -rf openkm.server.zip
        wget -q https://www.dropbox.com/s/hhcklafy589vfug/openkm.server.zip
+       mkdir -p server
+       unzip -o openkm.server.zip -d server/
 
 mounts:
     '/server':
@@ -36,5 +38,4 @@ relationships:
 web:
     commands:
         start: |
-          unzip -o openkm.server.zip -d server/
           sh server/tomcat-8.5.34/bin/catalina.sh start
