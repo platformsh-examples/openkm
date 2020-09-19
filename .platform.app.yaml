@@ -14,7 +14,7 @@ disk: 1024
 hooks:
     build:  |
        rm -rf server/*
-       wget -q https://www.dropbox.com/s/dsp2if2rxkt79ot/openkm.server.zip
+       wget -q https://www.dropbox.com/s/hhcklafy589vfug/openkm.server.zip
 
 mounts:
     '/server':
