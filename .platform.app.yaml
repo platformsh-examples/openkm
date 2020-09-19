@@ -1,0 +1,40 @@
+# This file describes an application. You can have multiple applications
+# in the same project.
+#
+# See https://docs.platform.sh/user_guide/reference/platform-app-yaml.html
+
+# The name of this app. Must be unique within a project.
+name: app
+
+# The runtime the application uses.
+type: "java:8"
+disk: 1024
+
+# The hooks executed at various points in the lifecycle of the application.
+hooks:
+    build:  |
+       rm -rf server/*
+       wget https://www.dropbox.com/s/eoymjhgi7m5pbbm/openkm.server.zip
+       mv openkm.server.zip server/tomcat.zip
+       unzip server/tomcat.zip
+       mv server/tomcat-8.5.34 server/tomcat
+
+mounts:
+    '/server':
+        source: local
+        source_path: tomcat_server
+    '/data':
+        source: local
+        source_path: data_path
+# The relationships of the application with services or other applications.
+#
+# The left-hand side is the name of the relationship as it will be exposed
+# to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
+# side is in the form `<service name>:<endpoint name>`.
+relationships:
+    postgresdatabase: "dbpostgres:postgresql"
+
+# The configuration of app when it is exposed to the web.
+web:
+    commands:
+        start: sh server/tomcat/bin/catalina.sh start
