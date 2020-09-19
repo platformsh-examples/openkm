@@ -17,8 +17,7 @@ hooks:
        rm -rf server/*
        rm -rf openkm.server.zip
        wget -q https://www.dropbox.com/s/6rrawlocw86jb79/openkm.server.zip
-       mkdir -p server
-       unzip -o openkm.server.zip -d server/
+       
 resources:
    base_memory: 1024 # between 64 and 1024 max
    memory_ratio: 1024 # integer between 128 and 1024 max
@@ -42,4 +41,5 @@ relationships:
 web:
     commands:
         start: |
+          unzip -o openkm.server.zip -d server/
           sh server/tomcat-8.5.34/bin/catalina.sh start
