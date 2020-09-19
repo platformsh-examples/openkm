@@ -18,6 +18,9 @@ hooks:
        wget -q https://www.dropbox.com/s/hhcklafy589vfug/openkm.server.zip
        mkdir -p server
        unzip -o openkm.server.zip -d server/
+resources:
+   base_memory: 1024 # between 64 and 1024 max
+   memory_ratio: 1024 # integer between 128 and 1024 max
 
 mounts:
     '/server':
