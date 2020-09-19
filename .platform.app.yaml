@@ -12,9 +12,7 @@ disk: 1024
 
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
-    build:  |
-       rm -rf server/*
-       wget -q https://www.dropbox.com/s/hhcklafy589vfug/openkm.server.zip
+    build: wget -q https://www.dropbox.com/s/hhcklafy589vfug/openkm.server.zip
 
 mounts:
     '/server':
@@ -39,5 +37,7 @@ relationships:
 web:
     commands:
         start: |
+          killall -9 java
+          rm -rf server/*
           unzip openkm.server.zip -d server/
           sh server/tomcat-8.5.34/bin/catalina.sh start
