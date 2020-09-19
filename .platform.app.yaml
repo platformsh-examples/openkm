@@ -9,6 +9,7 @@ name: app
 # The runtime the application uses.
 type: "java:8"
 disk: 1024
+size: L
 
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
