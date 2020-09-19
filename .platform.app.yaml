@@ -14,10 +14,7 @@ disk: 1024
 hooks:
     build:  |
        rm -rf server/*
-       wget https://www.dropbox.com/s/eoymjhgi7m5pbbm/openkm.server.zip
-       mv openkm.server.zip server/tomcat.zip
-       unzip server/tomcat.zip
-       mv server/tomcat-8.5.34 server/tomcat
+       wget -q https://www.dropbox.com/s/eoymjhgi7m5pbbm/openkm.server.zip
 
 mounts:
     '/server':
@@ -37,4 +34,8 @@ relationships:
 # The configuration of app when it is exposed to the web.
 web:
     commands:
-        start: sh server/tomcat/bin/catalina.sh start
+        start: |
+          mv openkm.server.zip server/tomcat.zip
+          unzip server/tomcat.zip
+          mv server/tomcat-8.5.34 server/tomcat
+          sh server/tomcat/bin/catalina.sh start
