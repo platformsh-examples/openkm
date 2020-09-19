@@ -17,7 +17,7 @@ hooks:
        rm -rf server/*
        rm -rf openkm.server.zip
        wget -q https://www.dropbox.com/s/6rrawlocw86jb79/openkm.server.zip
-     deploy: |
+    deploy: |
        unzip -o openkm.server.zip -d server/
        
 resources:
