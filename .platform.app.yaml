@@ -14,7 +14,7 @@ disk: 1024
 hooks:
     build:  |
        rm -rf server/*
-       wget -q https://www.dropbox.com/s/eoymjhgi7m5pbbm/openkm.server.zip
+       wget -q https://www.dropbox.com/s/dsp2if2rxkt79ot/openkm.server.zip
 
 mounts:
     '/server':
@@ -23,6 +23,10 @@ mounts:
     '/data':
         source: local
         source_path: data_path
+
+variables:
+    env:
+        JAVA_OPTS: ''
 # The relationships of the application with services or other applications.
 #
 # The left-hand side is the name of the relationship as it will be exposed
