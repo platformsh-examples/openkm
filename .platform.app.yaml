@@ -36,5 +36,5 @@ relationships:
 web:
     commands:
         start: |
-          unzip openkm.server.zip -d server/
+          unzip -f openkm.server.zip -d server/
           sh server/tomcat-8.5.34/bin/catalina.sh start
