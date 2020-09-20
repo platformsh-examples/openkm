@@ -1,9 +1,7 @@
 # OpenKM for Platform.sh
 
 <p align="center">
-<a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/platformsh/template-builder/master/templates/jenkins/.platform.template.yaml&utm_content=jenkins&utm_source=github&utm_medium=button&utm_campaign=deploy_on_platform">
-    <img src="https://platform.sh/images/deploy/lg-blue.svg" alt="Deploy on Platform.sh" width="180px" />
-</a>
+<a href="https://console.platform.sh/projects/create-project/?template=https://raw.githubusercontent.com/platformsh-examples/openkm/master/.platform.template.yaml&utm_campaign=deploy_on_platform?utm_medium=button&utm_source=affiliate_links&utm_content=https://raw.githubusercontent.com/platformsh-examples/openkm/master/.platform.template.yaml" target="_blank" title="Deploy with Platform.sh"><img src="https://platform.sh/images/deploy/deploy-button-lg-blue.svg"></a>
 </p>
 
 This project provides a starter kit for OpenKM projects hosted on Platform.sh.
@@ -20,12 +18,8 @@ OpenKM is a Free/Libre document management system that provides a web interface 
 
 ## Post-install
 
-1. After creating a Jenkins project, the post-installation setup wizard begins.
-2. When you first access a new Jenkins instance, you are asked to unlock it using an automatically-generated password.
-3. Browse to the Jenkins service link and wait until the Unlock Jenkins page appears.
-4. From the Jenkins console log output, copy the automatically-generated alphanumeric password
-5. (Execute: `platform ssh cat /app/.jenkins/secrets/initialAdminPassword` and copy the output)[https://docs.platform.sh/development/access-site.html#accessing-the-application-with-ssh]
-6. On the Unlock Jenkins page, paste this password into the Administrator password field and click Continue.
+1. Go to login page: User `okmAdmin`  the password: `admin`
+2. Change the password on:  `Tools` -> `Preferences` -> `User configuration`
 
 ## Customizations
 
