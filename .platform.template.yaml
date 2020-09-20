@@ -1,0 +1,26 @@
+version: 1
+
+info:
+  id: OpenKM
+  name: OpenKM
+  description: |
+     <p>This project provides a starter kit for OpenKM projects hosted on Platform.sh.</p>
+     <p>OpenKM is a Free/Libre document management system that provides a web interface for managing nonspecific files. OpenKM includes a content repository, Lucene indexing, and jBPM workflow. The OpenKM system was developed using open technology.</p>
+  tags:
+  - Java
+  - OpenKM
+  - Maven
+  
+  notes:
+    - heading: "Features"
+      content: |
+          Java 8<br />
+          PostgreSQL<br />
+          Automatic TLS certificates<br />
+          Maven-based build<br />
+
+initialize:
+  repository: git://github.com/platformsh-examples/openKM.git@master
+  config: null
+  files: []
+  profile: OpenKM
