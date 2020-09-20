@@ -20,7 +20,7 @@ info:
           Maven-based build<br />
 
 initialize:
-  repository: git://github.com/platformsh-examples/openKM.git@master
+  repository: git://github.com/platformsh-examples/openkm.git@master
   config: null
   files: []
   profile: OpenKM
