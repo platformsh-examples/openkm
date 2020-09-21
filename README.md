@@ -14,12 +14,12 @@ OpenKM is a Free/Libre document management system that provides a web interface 
 * Java 8
 * PostgreSQL
 * Automatic TLS certificates
-* Jenkins downloaded on the fly during build
 
 ## Post-install
 
-1. Go to login page: User `okmAdmin`  the password: `admin`
-2. Change the password on:  `Tools` -> `Preferences` -> `User configuration`
+1. Set the plan to a Large one.
+2. Go to login page: User `okmAdmin`  the password: `admin`
+3. Change the password on:  `Tools` -> `Preferences` -> `User configuration`
 
 ## Customizations
 
